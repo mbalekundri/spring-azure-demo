@@ -1,0 +1,25 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings.trace: true
+      settings.web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:azure-demo
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (create, create-drop, validate, update)
+logging:
+  level:
+    web: DEBUG
+#    org.hibernate:
+#      hibernate:
+#        SQL: DEBUG
+#        type: TRACE
+server:
+  port: 9090
